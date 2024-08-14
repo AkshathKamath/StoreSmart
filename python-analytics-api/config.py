@@ -1,0 +1,1 @@
+file_path = 'https://storesmart.s3.amazonaws.com/supermarket.csv'
