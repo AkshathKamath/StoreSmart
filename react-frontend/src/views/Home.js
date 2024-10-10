@@ -11,7 +11,9 @@ const HomePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://44.216.20.188:8000/home");
+        const response = await axios.get(
+          "https://storesmart-backend-production.up.railway.app/home"
+        );
         // const response = await axios.get("http://localhost:8000/home");
         // const response = await axios.get("api/home");
         setData(response.data);
@@ -39,16 +41,21 @@ const HomePage = () => {
 
   //To handle form-upload, post api request to backend
   const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
+    // console.log(event.target.files[0]);
+    const file = event.target.files[0];
+    setSelectedFile(file);
+    console.log(selectedFile);
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
     formData.append("file", selectedFile);
+    // console.log(formData);
 
     try {
+      console.log(formData);
       const response = await axios.post(
-        "http://http://44.216.20.188:8000/analytics/form",
+        "https://storesmart-backend-production.up.railway.app/analytics/form",
         formData,
         {
           headers: {

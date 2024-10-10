@@ -13,7 +13,7 @@ const StoreWise = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          "http://44.216.20.188:8000/analytics/storewise"
+          "https://storesmart-backend-production.up.railway.app/analytics/storewise"
         );
         // const response = await axios.get(
         //   "http://localhost:8000/analytics/storewise"

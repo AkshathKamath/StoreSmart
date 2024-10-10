@@ -14,7 +14,7 @@ const AnalyticsForm = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          "http://44.216.20.188:8000/analytics/form"
+          "https://storesmart-backend-production.up.railway.app/analytics/form"
         );
         // const response = await axios.get("api/analytics/form");
         // const response = await axios.get(

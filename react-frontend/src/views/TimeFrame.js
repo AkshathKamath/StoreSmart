@@ -13,7 +13,7 @@ const Timeframe = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          "http://44.216.20.188:8000/analytics/timeframe"
+          "https://storesmart-backend-production.up.railway.app/analytics/timeframe"
         );
         // const response = await axios.get(
         //   "http://localhost:8000/analytics/timeframe"
